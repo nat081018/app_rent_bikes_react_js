@@ -1,24 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+import ListCyties from "./components/list_cyties/ListCyties";
+import Stations from "./components/stations/Stations"
+
+
+const  getCyties  = async () => {
+  let allCyties = []
+  const cytiesInfo = await fetch("https://api.citybik.es/v2/networks?fields=id,company")
+  .then((response) => response.json())
+  .then((res) => allCyties = res)
+  
+  return console.log(allCyties)
+}
+getCyties()
+
 function App() {
+
+  
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Rent bikes</h1>
+      <div className="bikes__info-wrapper">
+        {
+
+        }
+        <ListCyties />
+        <Stations/>
+      </div>
     </div>
   );
 }

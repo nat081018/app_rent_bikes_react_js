@@ -2,7 +2,15 @@
   text-align: center;
 }
 
-.App-logo {
+.bikes__info-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  border: 2px solid black;
+
+}
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,4 +43,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
