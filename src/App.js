@@ -17,9 +17,6 @@ getCyties()
 
 function App() {
 
-  
-
-
   return (
     <div className="App">
       <h1>Rent bikes</h1>
